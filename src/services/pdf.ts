@@ -6,8 +6,6 @@ export const extractTextFromPDF = async (buffer: Buffer): Promise<string> => {
 
     const loadingTask = getDocument({
       data,
-      standardFontDataUrl:
-        "https://unpkg.com/pdfjs-dist@5.4.394/standard_fonts/",
     });
     const pdf = await loadingTask.promise;
 
