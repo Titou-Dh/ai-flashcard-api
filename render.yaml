@@ -1,13 +1,11 @@
 services:
   - type: web
     name: flashcard-backend
-    env: bun
-    buildCommand: bun install
-    startCommand: bun run src/index.ts
+    env: docker
     envVars:
       - key: PORT
         value: 3000
       - key: OPENROUTER_API_KEY
-        value: $OPENROUTER_API_KEY
+        sync: false
       - key: OPENROUTER_MODEL
-        value: $OPENROUTER_MODEL
+        sync: false
